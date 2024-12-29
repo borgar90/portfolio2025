@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 
 export const Hero = () => {
   return (
-    <section className="min-h-screen flex items-center justify-center bg-gradient-to-r from-primary to-secondary p-4">
+    <section className="min-h-screen flex items-center justify-center bg-gradient-to-r from-highlight to-secondary p-4">
       <div className="container mx-auto grid md:grid-cols-2 gap-8 items-center">
         <motion.div 
           initial={{ opacity: 0, x: -20 }}
