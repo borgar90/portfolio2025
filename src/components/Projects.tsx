@@ -30,9 +30,9 @@ const projects = [
   },
   {
     title: "Musikk app",
-    description: "Design av tskjorte trykk for Johansen multiservice.",
+    description: "En app for opplasting og avspilling av musikkfiler.",
     image: musicforside,
-    tags: ["Adobe Illustrator"],
+    tags: ["Vue.js", "Node.js", "MongoDB"],
   },
   {
     title: "Choco Critique",
@@ -70,9 +70,9 @@ const projects = [
 
 export const Projects = () => {
   return (
-    <section className="py-20 bg-background">
+    <section id="projects" className="py-20 bg-background">
       <div className="container">
-        <h2 className="text-4xl font-bold mb-12 text-center">Fremhevede prosjekt</h2>
+        <h2 className="text-5xl font-bold mb-16 ">Fremhevede prosjekt</h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, index) => (
             <motion.div

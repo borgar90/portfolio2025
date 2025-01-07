@@ -13,8 +13,12 @@ export const Hero = () => {
           <h1 className="text-6xl font-bold mb-4">Borgar Flaen Stensrud</h1>
           <h2 className="text-4xl mb-4">18 År Med Digital Kreativitet</h2>
           <p className="text-xl mb-6">Forvandler ider til digitale opplevelser</p>
-          <button className="bg-accent hover:bg-accent/90 text-white px-8 py-3 rounded-lg font-semibold transition-colors">
-            View Projects
+          <button 
+          className="bg-accent hover:bg-accent/90 text-white px-8 py-3 rounded-lg font-semibold transition-colors"
+          onClick={() => {
+            document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' });
+          }}>
+            Se mine prosjekt
           </button>
         </motion.div>
         <motion.div
