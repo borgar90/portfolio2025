@@ -6,13 +6,13 @@ export const Contact = () => {
   return (
     <section className="py-20 bg-gradient-to-r from-highlight to-accent">
       <div className="container">
-        <Card className="max-w-2xl mx-auto">
+        <Card className="max-w-2xl mx-auto bg-white/10 backdrop-blur-sm p-4">
           <CardHeader>
-            <CardTitle className="text-3xl text-center">Let's Connect</CardTitle>
+            <CardTitle className="text-3xl text-center text-white">Let's Connect</CardTitle>
           </CardHeader>
-          <CardContent className="space-y-4">
+          <CardContent className="space-y-4 flex justify-center flex-col items-center">
             <a 
-              href="https://linkedin.com/in/your-profile" 
+              href="https://www.linkedin.com/in/borgar-stensrud-0204181a/" 
               target="_blank" 
               rel="noopener noreferrer"
             >
@@ -21,7 +21,7 @@ export const Contact = () => {
                 Connect on LinkedIn
               </Button>
             </a>
-            <a href="mailto:your.email@example.com">
+            <a href="mailto:Borgar90@gmail.com">
               <Button variant="outline" className="w-full flex items-center gap-2">
                 <MailIcon className="w-5 h-5" />
                 Send Email

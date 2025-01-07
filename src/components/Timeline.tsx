@@ -1,6 +1,6 @@
 import { useEffect, useRef } from 'react';
 import { motion, useInView, useAnimation } from 'framer-motion';
-
+import hourglass from "../../public/img/timeline/hourglass.png";
 interface Achievement {
   year: number;
   title: string;
@@ -8,12 +8,15 @@ interface Achievement {
 }
 
 const achievements: Achievement[] = [
-  { year: 2004, title: "Started Web Development", description: "First steps into web development" },
-  { year: 2008, title: "First Professional Project", description: "Launched first commercial website" },
-  { year: 2012, title: "Mobile Development", description: "Expanded into mobile app development" },
-  { year: 2016, title: "Team Leadership", description: "Led development team of 5 members" },
-  { year: 2020, title: "Cloud Architecture", description: "Mastered cloud-native development" },
-  { year: 2025, title: "Future Goals", description: "Continuing to innovate and lead" },
+  { year: 2006, title: "Hjalmar Johansen VGS", description: "Blev introdusert for programmering i AS3 (Flash)" },
+  { year: 2008, title: "Borgarting Media", description: "Jobbet som freelancer innen grafisk design og web" },
+  { year: 2012, title: "HiBu - Bachelor i Dynamisk Webdesign", description: "Studerte Dynamisk Webdesign i Hønefoss. Uteksaminert med A-karakter på bachelor oppgaven." },
+  { year: 2014, title: "Under Construction Web", description: "Jobbet som freelancer innen web dev/design" },
+  { year: 2016, title: "Telesalg AS", description: "Jobbet som inhouse utvikler for Telesalg AS, og jobbet med logo-design og utvikling av grafiske profiler eksternt." },
+  { year: 2018, title: "Future Tech", description: "Jobbet freelance med webutvikling. Jobbet mye med utprøvning/læring innen digital tidsregning i java/python og fordypet meg i kvante-teori." },
+  { year: 2022, title: "USN - Bachelor i informatikk", description: "Tok enda en Bachelor i informatikk. A i flere utviklings-prosjekt emner" },
+  { year: 2024, title: "Intern Rubynor / Kaukus", description: "Ruby on rails intern. Jobbet på Kaukus sin totalløsning for møteorganisering for lokaldemokrati." },
+  { year: 2025, title: "Fremtidige mål", description: "Jobbe som utvikler og fortsette min fordypning innen KI" },
 ];
 
 const TimelineItem = ({ achievement }: { achievement: Achievement }) => {
@@ -51,15 +54,22 @@ const TimelineItem = ({ achievement }: { achievement: Achievement }) => {
 
 export const Timeline = () => {
   return (
-    <section className="py-16 px-4">
-      <h2 className="text-3xl font-bold text-center mb-12">Journey Through Time</h2>
+    <section className="py-16 px-4 relative">
+      <h2 className="text-3xl font-bold text-center mb-12">En tidsreise i min kariere</h2>
       <div className="relative container mx-auto">
-        <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-0.5 bg-gray-200"></div>
+        <div className="absolute left-2/3 transform -translate-x-1/2 h-full w-0.5 bg-gray-200"></div>
         <div className="space-y-8">
           {achievements.map((achievement) => (
             <TimelineItem key={achievement.year} achievement={achievement} />
           ))}
         </div>
+        <img
+          width={200}
+          height={400}
+          src={hourglass}
+          alt="Hourglass"
+          className="absolute right-0 top-1/4 hidden lg:block"
+        />
       </div>
     </section>
   );
