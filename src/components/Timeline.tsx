@@ -55,7 +55,8 @@ const TimelineItem = ({ achievement }: { achievement: Achievement }) => {
 export const Timeline = () => {
   return (
     <section className="py-16 px-4 relative mt-5">
-      <h2 className="text-5xl font-bold px-8 mb-16">En tidsreise i min kariere</h2>
+      <div className="container">
+      <h2 className="text-5xl font-bold mb-16">En tidsreise i min kariere</h2>
       <div className="relative container mx-auto">
         <div className="absolute left-2/3 transform -translate-x-1/2 h-full w-0.5 bg-gray-200"></div>
         <div className="space-y-8">
@@ -70,6 +71,7 @@ export const Timeline = () => {
           alt="Hourglass"
           className="absolute right-10 top-1/4 hidden 2xl:block"
         />
+      </div>
       </div>
     </section>
   );
